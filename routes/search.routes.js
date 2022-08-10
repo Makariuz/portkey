@@ -26,7 +26,7 @@ router.get('/:country', async (req, res) => {
 router.get('/city/:id', async (req, res) => {
     const result = await Cities.findById(req.params.id).populate({path: 'places', populate: {path: 'author'}}).populate({path: 'posts', populate: {path: 'author'}})
     // options to get weather for a city
-    const city = result.name
+   /*  const city = result.name
     const weatherOptions = {
     method: 'GET',
     url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
@@ -49,8 +49,8 @@ router.get('/city/:id', async (req, res) => {
     const locationResponse = await axios.request(locationOptions)
     // passing coordinates to map
     const coordinates = [locationResponse.data.locations[0].referencePosition.latitude, locationResponse.data.locations[0].referencePosition.longitude]
-
-    res.render('cities/city-info2', { result, coordinates, response })
+ */
+    res.render('cities/city-info2', { result })
 })
 
 module.exports = router
