@@ -10,8 +10,8 @@ const override = require('method-override') */
 // environment variables
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL).then(() => {
-  console.log('MongoDB is connected')
+mongoose.connect(process.env.MONGO_URL ,{ useNewUrlParser: true }).then(() => {
+  console.log('MongoDB is connected.')
 }).catch(err => console.log(err))
 
 const app = express();
