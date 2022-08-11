@@ -10,7 +10,9 @@ const override = require('method-override') */
 // environment variables
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_DB_URL);
+mongoose.connect(process.env.MONGO_URL).then(() => {
+  console.log('MongoDB is connected')
+}).catch(err => console.log(err))
 
 const app = express();
 
@@ -67,4 +69,4 @@ app.use('/', require('./routes/api.routes'))
 app.use('/', require('./routes/api.routes'))
 app.use('/', require('./routes/search.routes'))
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 5000);
