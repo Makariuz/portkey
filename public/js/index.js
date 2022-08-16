@@ -4,43 +4,23 @@ const searchInput = document.querySelector('[data-search]')
 const message = document.querySelector('.message')
 const card = document.querySelector('.card')
 const header = document.querySelector('[data-header]')
+const searchBtn = document.querySelector('.search-btn')
 
 let countries = [] 
 
 
 searchInput.addEventListener('input', (e) => {
-  if(searchInput.value === "") {
-    userCardContainer.style.display = "none"
-  } else {
- userCardContainer.style.display = "flex"
- userCardContainer.addEventListener('click', () => {
-})
-}
 
-const value = e.target.value.toLowerCase()       
-countries.forEach(city => {
+const value = e.target.value.toLowerCase()   
 
-      const isVisible = city.name.toLowerCase().includes(value)
-      city.element.classList.toggle('hide', !isVisible)
-      })
+  if (value !== ''){
+  /*   searchBtn.classList.add('show')  */
+
+  }
+
 })
 
 
-  countries = data.map(country => {
-  
-   
-      const card = userCardTemplate.content.cloneNode(true).children[0]
-      const header = card.querySelector('[data-header]')
-      const body = card.querySelector('[data-body]')
-    
-      header.textContent = country.name
-      userCardContainer.append(card)
-      return {name: country.name, country: country.country, element: card}
-
-  
-   
-  })
-  
 
 
 

@@ -21,7 +21,7 @@ app.set("view engine", "ejs");
 // ejs layout setup
 app.use(expressLayouts);
 // middleware to extract the body from the request
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 // hooking up the public folder
 app.use(express.static("public"));
 

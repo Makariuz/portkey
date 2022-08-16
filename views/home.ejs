@@ -1,48 +1,21 @@
-<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/home.css" />
 
 <div class="wrapper">
-
-  <div class="head-wrapper">
-      
-  
-
+  <div class="home-container">
+    <form class="search-bar" action="/search" method="post">
+      <input
+        type="search"
+        id="search"
+        name="search"
+        autocomplete="off"
+        placeholder="Search..."
+        data-search
+      />
+      <button type="submit" class="search-btn hide">Go</button>
+    </form>
   </div>
-
-    <div class="home-container">
-      <div class="img-wrap">
-        <img src="/images/logo.png" alt="">
-      </div>
-     
-      <div class="search-div">
-        <form class="search-bar" action="/search" method="post">
-          <input type="search" id="search" name="search" autocomplete="off" placeholder="Search for City or Country" data-search>
-          <button type="submit"> &#128269</button>
-      </form>
-      </div>
-
-      <div class="user-cards" data-user-cards-container>
-
-        <template data-user-template>
-          <ul class="card">
-        
-          <li name="li" class="header" style="list-style: none;" data-header> </li> 
-      
-          </ul>
-      </template>
-
-
-    </div>
-  </div>
-
-
-
 </div>
 
-
-
-
-
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="/js/db.js"></script>
-  <script type="text/javascript" src="/js/index.js"></script>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="/js/db.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
